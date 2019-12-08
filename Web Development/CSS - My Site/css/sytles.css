@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+
+div.top_container {
+  background-color: #dff6f0;
+  /* border: 10px solid black;
+  margin: 20px;
+  height: 200px;
+  width: 200px; */
+}
+
+div.middle_container {
+  background-color: blueviolet;
+  height: 200px;
+  width: 200px;
+}
+div.bottom_container {
+  background-color: brown;
+  height: 200px;
+  width: 200px;
+}
+
+.name {
+  /* padding: 10px; */
+  margin-top: 0%;
+}
+
+.title {
+  /* padding: 10px; */
+  margin-top: 0%;
+}
