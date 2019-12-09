@@ -1,25 +1,36 @@
+body {
+  margin: 0;
+}
+
 .red {
   background-color: red;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
   margin: 0;
+  position: absolute;
+  left: 200px;
+  top: 200px;
 }
 
 .blue {
   background-color: blue;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
   margin: 0;
+  position: absolute;
+  left: 100px;
+  top: 100px;
 }
 
 .yellow {
   background-color: yellow;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
-  position: relative;
-  left: 0.5%;
   margin: 0;
+  position: absolute;
+  /* left: 0;
+  top: 0; */
 }

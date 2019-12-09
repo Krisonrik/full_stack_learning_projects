@@ -1,32 +1,152 @@
 body {
   margin: 0;
+  text-align: center;
 }
 
-div.top_container {
+.top-container {
   background-color: #dff6f0;
+  padding: 100px;
+  position: relative;
   /* border: 10px solid black;
   margin: 20px;
   height: 200px;
   width: 200px; */
 }
 
-div.middle_container {
-  background-color: blueviolet;
-  height: 200px;
-  width: 200px;
+.middle-container {
+  background-color: #ffffff;
 }
-div.bottom_container {
-  background-color: brown;
-  height: 200px;
-  width: 200px;
+.bottom-container {
+  background-color: #66bfbf;
+  padding: 30px 0 30px 0;
+}
+
+img.cloud-top {
+  position: absolute;
+  right: 300px;
+  top: 75px;
+}
+
+img.cloud-bottom {
+  position: absolute;
+  left: 300px;
+  bottom: 400px;
+}
+
+img.headshot {
+  border-radius: 50%;
+  border-color: #66bfbf;
+  border-style: solid;
+  height: 20%;
+  margin: 50px auto 20px auto;
+  width: 20%;
+}
+
+img.coding {
+  margin: 0 30px 30px 0px;
+  width: 25%;
+  float: left;
+}
+
+img.cooking {
+  margin: 0 0 30px 30px;
+  width: 25%;
+  float: right;
+}
+
+.skill-row {
+  margin: 30px auto 50px auto;
+  text-align: left;
+  width: 70%;
 }
 
 .name {
-  /* padding: 10px; */
-  margin-top: 0%;
+  font-family: "Clicker Script", cursive;
 }
 
 .title {
-  /* padding: 10px; */
-  margin-top: 0%;
+  font-weight: normal;
+}
+
+.btn {
+  background: linear-gradient(#66bfbf, #11999e);
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: #eaf6f6;
+  display: inline-block;
+  /* font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif; */
+  font: normal bold 16px "Ubuntu", sans-serif;
+  margin: 20px auto 40px auto;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px #000000;
+}
+
+.btn:hover {
+  background: linear-gradient(#abe2e2, #259fa3);
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: #eaf6f6;
+  display: inline-block;
+  /* font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif; */
+  font: normal bold 16px "Ubuntu", sans-serif;
+  margin: 20px auto 40px auto;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px #000000;
+}
+
+h1 {
+  font-family: "Sulphur Point", sans-serif;
+  font-size: 5.625rem;
+  color: #66bfbf;
+  margin: 10px 0 15px 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #66bfbf;
+  font-family: "Sulphur Point", sans-serif;
+}
+
+h3 {
+  color: #11999e;
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "Sulphur Point", sans-serif;
+}
+
+p {
+  /* position: relative; */
+  margin: 20px auto 20px auto;
+  /* left: 15%; */
+  /* width: 70%; */
+  font-family: "Overpass Mono", monospace;
+  line-height: 1.5;
+}
+
+p.copy-right {
+  color: #eaf6f6;
+}
+
+.divider {
+  border-top: 5px dotted #eaf6f6;
+  width: 5%;
+  clear: both;
+  margin: 50px auto 50px auto;
+}
+
+a {
+  color: #11999e;
+}
+
+.footer-link {
+  text-decoration: none;
+  padding: 10px;
+}
+.footer-link:hover {
+  color: white;
 }
