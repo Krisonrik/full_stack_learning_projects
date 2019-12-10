@@ -2,9 +2,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Title section */
+
 #title {
   background-color: #ff4c68;
   color: white;
+  overflow: hidden;
 
   /* font-family: "Montserrat", sans-serif; */
 }
@@ -42,13 +45,43 @@ h1.mission {
   margin: 5% 3% 5% 0;
 }
 
-/* .cellphone-image-holder {
+.cellphone-image-holder {
   max-height: 450px;
-  overflow: hidden;
-} */
+}
+
 .cellphone-image {
   width: 60%;
   transform: rotate(25deg);
   /* position: relative; */
   /* margin-top: 50px; */
+}
+
+/* Features section */
+
+#features {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+.feature-items {
+  /* margin: 100px auto 50px auto; */
+  padding: 5%;
+}
+
+.feature-icon {
+  color: #ef8172;
+  margin: 10px auto 20px auto;
+}
+
+.feature-icon:hover {
+  color: #ff4c68;
+}
+
+h3 {
+  font-weight: 900;
+}
+
+p.features {
+  color: gray;
+  font-weight: 600;
 }
