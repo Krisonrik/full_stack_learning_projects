@@ -1,21 +1,54 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 #title {
   background-color: #ff4c68;
+  color: white;
+
   /* font-family: "Montserrat", sans-serif; */
+}
+
+.navbar {
+  padding: 0 0 4.5rem;
 }
 
 .brand {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 900;
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 h1.mission {
-  font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 1.5;
   font-weight: 900;
-  color: white;
+  /* margin: 100px auto 50px auto; */
 }
 
 .container-fluid {
   padding: 3% 15%;
+}
+
+.top-nav-item {
+  padding: 0 18px 0 18px;
+}
+
+.nav-item-text {
+  font-size: 1.1rem;
+}
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* .cellphone-image-holder {
+  max-height: 450px;
+  overflow: hidden;
+} */
+.cellphone-image {
+  width: 60%;
+  transform: rotate(25deg);
+  /* position: relative; */
+  /* margin-top: 50px; */
 }
