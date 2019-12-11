@@ -7,7 +7,7 @@ body {
 #title {
   background-color: #ff4c68;
   color: white;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   /* font-family: "Montserrat", sans-serif; */
 }
@@ -30,7 +30,7 @@ h1.mission {
 }
 
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 7%;
 }
 
 .top-nav-item {
@@ -46,13 +46,16 @@ h1.mission {
 }
 
 .cellphone-image-holder {
-  max-height: 450px;
+  padding-left: 8%;
+  /* max-height: 450px; */
 }
 
 .cellphone-image {
   width: 60%;
   transform: rotate(25deg);
-  /* position: relative; */
+
+  position: absolute;
+  z-index: 0;
   /* margin-top: 50px; */
 }
 
@@ -61,6 +64,10 @@ h1.mission {
 #features {
   font-family: "Montserrat";
   text-align: center;
+  padding: 7% 15%;
+  background-color: white;
+  position: relative;
+  /* z-index: 1; */
 }
 
 .feature-items {
@@ -84,4 +91,58 @@ h3 {
 p.features {
   color: gray;
   font-weight: 600;
+}
+
+/* Testimonials section */
+
+#testimonials {
+  background-color: #ef8172;
+  color: #fff;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+.testimonial-contents {
+  padding: 7% 15%;
+}
+
+h2.testimonial-text {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 3rem;
+  /* padding: 10%; */
+}
+
+.testimonial-img {
+  border-radius: 50%;
+  width: 10%;
+}
+
+.testimonial-origin {
+  font-weight: 400;
+}
+
+/* Press */
+#press {
+  background-color: #ef8172;
+  color: #fff;
+  font-family: "Montserrat";
+  padding: 3%;
+  text-align: center;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing */
+#pricing {
+  font-family: "Montserrat";
+  text-align: center;
+  margin: 50px;
+}
+
+.pricing-cards {
+  padding: 3% 2%;
 }
