@@ -7,9 +7,6 @@ body {
 #title {
   background-color: #ff4c68;
   color: white;
-  /* overflow: hidden; */
-
-  /* font-family: "Montserrat", sans-serif; */
 }
 
 .navbar {
@@ -26,7 +23,6 @@ h1.mission {
   font-size: 3.5rem;
   line-height: 1.5;
   font-weight: 900;
-  /* margin: 100px auto 50px auto; */
 }
 
 .container-fluid {
@@ -57,6 +53,17 @@ h1.mission {
   position: absolute;
   z-index: 0;
   /* margin-top: 50px; */
+}
+
+@media (max-width: 1024px) {
+  #title {
+    text-align: center;
+  }
+
+  .cellphone-image {
+    transform: rotate(0);
+    position: static;
+  }
 }
 
 /* Features section */
@@ -110,7 +117,6 @@ h2.testimonial-text {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 3rem;
-  /* padding: 10%; */
 }
 
 .testimonial-img {
@@ -122,7 +128,7 @@ h2.testimonial-text {
   font-weight: 400;
 }
 
-/* Press */
+/* Press Section */
 #press {
   background-color: #ef8172;
   color: #fff;
@@ -136,7 +142,7 @@ h2.testimonial-text {
   margin: 20px 20px 50px;
 }
 
-/* Pricing */
+/* Pricing Section*/
 #pricing {
   font-family: "Montserrat";
   text-align: center;
@@ -145,4 +151,40 @@ h2.testimonial-text {
 
 .pricing-cards {
   padding: 3% 2%;
+}
+
+/* Call to Action Section*/
+
+#cta {
+  background-color: #ff4c68;
+  color: white;
+  padding: 7% 15%;
+  text-align: center;
+}
+
+h3.cta {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Footer Section */
+
+#footer {
+  font-weight: 600;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.social-media-icons {
+  color: black;
+  text-decoration: none;
+}
+
+.social-media-icons:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+p.footer {
+  color: gray;
 }
