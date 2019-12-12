@@ -8,18 +8,22 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   font-family: "Montserrat";
   font-weight: 900;
 }
 
-/* Title section */
-
-#title {
+.color-section {
   background-color: #ff4c68;
   color: white;
 }
 
+.white-section {
+  background-color: white;
+}
+
+/* Title section */
 .navbar {
   padding: 0 0 4.5rem;
 }
@@ -111,8 +115,6 @@ p.features {
 
 #testimonials {
   background-color: #ef8172;
-  color: #fff;
-  font-family: "Montserrat";
 }
 
 .testimonial-contents {
@@ -120,7 +122,6 @@ p.features {
 }
 
 h2.testimonial-text {
-  font-family: "Montserrat";
   font-weight: 600;
   font-size: 3rem;
 }
@@ -137,8 +138,6 @@ h2.testimonial-text {
 /* Press Section */
 #press {
   background-color: #ef8172;
-  color: #fff;
-  font-family: "Montserrat";
   padding: 3%;
 }
 
@@ -149,7 +148,6 @@ h2.testimonial-text {
 
 /* Pricing Section*/
 #pricing {
-  font-family: "Montserrat";
   margin: 50px;
 }
 
@@ -160,8 +158,6 @@ h2.testimonial-text {
 /* Call to Action Section*/
 
 #cta {
-  background-color: #ff4c68;
-  color: white;
   padding: 7% 15%;
 }
 
@@ -174,6 +170,7 @@ h3.cta {
 
 #footer {
   font-weight: 600;
+  color: gray;
   margin: 100px auto;
 }
 
@@ -185,8 +182,4 @@ h3.cta {
 .social-media-icons:hover {
   color: gray;
   text-decoration: none;
-}
-
-p.footer {
-  color: gray;
 }
