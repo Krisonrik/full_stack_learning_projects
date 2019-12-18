@@ -32,12 +32,12 @@ body {
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.form-signin input[name="first-name"] {
+.form-signin input[name="fName"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-signin input[name="last-name"] {
+.form-signin input[name="lName"] {
   margin-bottom: -1px;
   border-radius: 0;
 }

@@ -1,42 +1,67 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const bodyParser = require("body-parser");
-const request = require("request");
+const bodyParser = require('body-parser');
+const request = require('request');
 
-app.use(bodyParser({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static("public"));
+app.use(express.static('public'));
 
-app.get("/", (req, rsp) => {
-  rsp.sendFile(__dirname + "/signup.html");
+app.get('/', (req, rsp) => {
+  rsp.sendFile(__dirname + '/signup.html');
 });
 
-app.post("/", (req, rsp) => {
+app.post('/', (req, rsp) => {
   var body = req.body;
   var firstName = body.fName;
   var lastName = body.lName;
   var email = body.email;
 
-  var options = {
-    url: "https://usX.api.mailchimp.com/3.0/lists/4a6c0de3a9",
-    method: "POST"
+  var data = {
+    members: [{
+      email_address: email,
+      status: 'subscribed',
+      merge_fields: {FNAME: firstName, LNAME: lastName}
+    }]
   };
+
+  console.log(data);
+  var jsonData = JSON.stringify(data);
+  console.log(jsonData);
+
+  var options = {
+    url: 'https://us4.api.mailchimp.com/3.0/lists/4a6c0de3a9',
+    method: 'POST',
+    headers: {'Authorization': 'richard 45518cfba8a2af15ac13110a7135b36a-us4'},
+    body: jsonData
+  };
+
   request(options, (error, responds, body) => {
     if (error) {
       console.log(error);
+      rsp.sendFile(__dirname + '/failure.html');
     } else {
-      console.log(responds.statusCode);
+      if (responds.statusCode != 200) {
+        console.log(responds.statusCode);
+        console.log(responds.statusMessage);
+        rsp.sendFile(__dirname + '/failure.html');
+      } else {
+        rsp.sendFile(__dirname + '/success.html');
+      }
     }
   });
-  // console.log(body);
 });
 
-app.listen("3000", (req, rsp) => {
-  console.log("Server listening to port 3000");
+app.post('/failure', (req, rsp) => {
+  rsp.sendFile(__dirname + '/signup.html');
+})
+
+app.listen('3000', (req, rsp) => {
+  console.log('Server listening to port 3000');
 });
 
 // API Key
-//45518cfba8a2af15ac13110a7135b36a-us4
+// 45518cfba8a2af15ac13110a7135b36a-us4
 
-//List ID
-//4a6c0de3a9
+// List ID
+// 4a6c0de3a9
