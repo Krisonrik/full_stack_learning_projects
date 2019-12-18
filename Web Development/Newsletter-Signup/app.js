@@ -24,11 +24,7 @@ app.post('/', (req, rsp) => {
       merge_fields: {FNAME: firstName, LNAME: lastName}
     }]
   };
-
-  console.log(data);
   var jsonData = JSON.stringify(data);
-  console.log(jsonData);
-
   var options = {
     url: 'https://us4.api.mailchimp.com/3.0/lists/4a6c0de3a9',
     method: 'POST',
@@ -56,7 +52,7 @@ app.post('/failure', (req, rsp) => {
   rsp.sendFile(__dirname + '/signup.html');
 })
 
-app.listen('3000', (req, rsp) => {
+app.listen(process.env.PORT || 3000, (req, rsp) => {
   console.log('Server listening to port 3000');
 });
 
