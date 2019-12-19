@@ -2,6 +2,9 @@
 <body>
   <div class="box" id="heading">
     <h1><%= kindOfDay %>!</h1>
+    <% if (listName != "default"){ %> <!-- -->
+    <h2><%= listName %> list</h2>
+    <%}%> 
   </div>
   <div class="box">
     <% for(let i=0; i < newListItems.length; i++){%>
