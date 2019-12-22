@@ -1,26 +1,31 @@
 <%- include('header') %>
+
 <body>
   <div class="box" id="heading">
     <h1><%= kindOfDay %>!</h1>
-    <% if (listName != "default"){ %> <!-- -->
+    <% if (listName != "default"){ %>
+    <!-- -->
     <h2><%= listName %> list</h2>
     <%}%> 
   </div>
   <div class="box">
     <% for(let i=0; i < newListItems.length; i++){%>
     <div class="item">
-      <input type="checkbox" />
-      <p><%= newListItems[i] %></p>
+      <% let curTask = newListItems[i].task %>
+      <form action="/delete" method="POST">
+        <% let id = newListItems[i]._id %>
+        <p><input type="checkbox" name="checkbox" value=<%=id%>
+            onChange="this.form.submit()" />
+          <input type="hidden" name="listName" value=<%=listName%>>
+          <%= newListItems[i].task %></p>
+      </form>
     </div>
     <% }%>
     <form class="item" action="/" method="post">
-      <input
-        type="text"
-        name="newItem"
-        placeholder="New Item"
-        autocomplete="off"
-      />
-      <button type="submit" name="listButtonName" value=<%= listName %> class="">+</button>
+      <input type="text" name="newItem" placeholder="New Item"
+        autocomplete="off" />
+      <button type="submit" name="listButtonName" value=<%= listName %>
+        class="">+</button>
     </form>
   </div>
 </body>
