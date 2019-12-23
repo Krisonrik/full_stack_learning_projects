@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const ejs = require("ejs");
+const _ = require("lowdash");
 const app = express();
 
 app.use(express.static("public"));
@@ -55,6 +56,58 @@ app
         res.send(err);
       } else {
         res.send("Successfully deleted all articles.");
+      }
+    });
+  });
+
+app
+  .route("/articles/:articleName")
+  .get((req, res) => {
+    Article.findOne({ title: req.params.articleName }, (err, rslt) => {
+      if (err) {
+        res.send(err);
+      } else {
+        if (rslt) {
+          res.send(rslt);
+        } else {
+          res.send("No article found");
+        }
+      }
+    });
+  })
+  .put((req, res) => {
+    Article.update(
+      { title: req.params.articleName },
+      { title: req.body.title, content: req.body.content },
+      { overwrite: true },
+      (err, rslt) => {
+        if (err) {
+          res.send(err);
+        } else {
+          res.send("Successfully updated article.");
+        }
+      }
+    );
+  })
+  .patch((req, res) => {
+    Article.update(
+      { title: req.params.articleName },
+      { $set: req.body },
+      (err, rslt) => {
+        if (err) {
+          res.send(err);
+        } else {
+          res.send("Successfully updated article.");
+        }
+      }
+    );
+  })
+  .delete((req, res) => {
+    Article.deleteOne({ title: req.params.articleName }, (err, rslt) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send("Successfully deleted article.");
       }
     });
   });
