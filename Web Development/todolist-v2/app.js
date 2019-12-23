@@ -6,10 +6,24 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 
 const app = express();
-mongoose.connect("mongodb://localhost:27017/todolistDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(
+  "mongodb+srv://Krisonrik:Codepassion823@cluster0-jf4cu.mongodb.net/todolistDB",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  },
+  err => {
+    console.log(err);
+  }
+);
+
+// let connection = mongoose.connection;
+// if (!connection) {
+//   console.log("Failed to connect to database!");
+// } else {
+//   console.log("Successfully connected to database!");
+// }
+
 mongoose.pluralize(null);
 
 const modelHolder = {};

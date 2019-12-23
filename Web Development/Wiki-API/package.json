@@ -1,5 +1,5 @@
 {
-  "name": "todolist-v1",
+  "name": "wiki-api",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,14 +8,10 @@
   },
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "12.13.1"
-  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "lodash": "^4.17.15",
     "mongoose": "^5.8.2"
   }
 }
